@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Document</title>
+  <script type="text/javascript" src="album.js"></script>
+  <script type="text/javascript" src="artist.js"></script>
+  <script type="text/javascript" src="genre.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="objectcreator.js"></script>
+  <script type="text/javascript" src="sampleDbSet.js"></script>
+  <script type="text/javascript" src="title.js"></script>
+  <script>
+    window.onload=addMusicAlbum;
+  </script>
+  <style>
+    body {
+            padding: 10px;
+            text-align: center;
+            background-image: url('music.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+      h1{
+        background-color: black;
+        }
+
+      #myh1{
+        background-color: black;
+        border-radius: 0px 15px;
+       }
+        
+      
+      #add{
+        background-color:black;
+        color:gray;
+        padding: 5px;
+        border-radius: 0px 15px;
+      }
+
+      select{
+        background-color: black;
+        color: gray;
+      }
+      #sel1,#artistSelection,#sel{
+        width: 150px;
+        align-self: center;
+
+       }
+
+      
+    </style>
+
+</head>
+
+<body>
+  <div>
+    <h1  id="myh1" style=color:maroon> * * Music Album Details * *</h1>
+    <!-- add people via hard coded list -->
+    
+    <h4 style="color:darkblue">Select Your Available Albums Hear</h4>
+    <!--The SELECT element.-->
+    <select id="sel" onchange="show(this)">
+      <option value="">-- Select --</option>
+    </select>
+    <h2 style="color:darkblue"> Display all Titles and Artists in Album</h2>
+    <p id="msg"></p>
+    </div>
+    <div>
+    <br>
+    <p id="musicDetails"></p>
+    </div>
+    <hr><hr>
+    <div class="container">
+      <div class="card-deck">
+    <div class="card " style="width:50%" >
+    <h1 style=color:maroon><marquee>Title Information</marquee></h1>
+    <!-- add people via hard coded list -->
+    <h4 style='color:green'>Select Your Available Title Names :</h4>
+    <!-- <button id="add" onclick="addTitleInfo();">Add Title Data</button> -->
+    <select id="sel1" onchange="showTitles(this)">
+      <option value="">-- Select --</option>
+    </select>
+    <p id="titleMsg"></p>
+    </div>
+    <div class="card" style="width: 50%;">
+    <h1 style=color:maroon><marquee direction="right">Artist Information</marquee></h1>
+    <!-- add people via hard coded list -->
+    <h4 style='color:green'>Select Your Available Aritist Names :</h4>
+     <select id='artistSelection' onchange='showArtist(this)'>
+      <option value=" ">-- Select --</option>
+    </select>
+    <p id='artistMsg'></p>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
